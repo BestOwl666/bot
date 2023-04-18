@@ -7,10 +7,11 @@ import pyautogui
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import subprocess
 from dotenv import load_dotenv
+from aiogram import Bot, Dispatcher, executor, types
 
 load_dotenv()
 
-PROXY_URL = 
+PROXY_URL = "http://proxy.server:3128"
 bot = Bot(token=os.environ.get('TOKEN'), proxy=PROXY_URL)
 
 @bot.message_handler(commands=['start'])
